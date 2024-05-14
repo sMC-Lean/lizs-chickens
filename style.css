@@ -1,0 +1,73 @@
+/* Color Theme Swatches in Hex
+ .Wilderness-1-hex { color: #6393A6; }
+.Wilderness-2-hex { color: #BF785E; }
+.Wilderness-3-hex { color: #F2CBBD; }
+.Wilderness-4-hex { color: #A65B4B; }
+.Wilderness-5-hex { color: #733B36; } 
+*/
+
+.Wilderness-1 {
+  color: #6393a6;
+}
+.Wilderness-1-opacity {
+  color: #6393a644;
+}
+.Wilderness-2 {
+  color: #bf785e;
+}
+.Wilderness-2-opacity {
+  color: #bf785e44;
+}
+.Wilderness-3 {
+  color: #f2cbbd;
+}
+.Wilderness-3-opacity {
+  color: #f2cbbd44;
+}
+.Wilderness-4 {
+  color: #a65b4b;
+}
+.Wilderness-4-opacity {
+  color: #a65b4b44;
+}
+.Wilderness-5 {
+  color: #733b36;
+}
+.Wilderness-5-opacity {
+  color: #733b3644;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+.content-section,
+.hero,
+.content,
+div {
+  border: 1px solid yellowgreen;
+}
+body {
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 5vh;
+}
+
+.hero {
+  height: 95vh;
+  flex: 1;
+}
+.hero-content {
+  height: 95vh;
+}
