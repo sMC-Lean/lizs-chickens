@@ -19,7 +19,7 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <header>
+    <header class="header">
       <nav class="nav-bar">
         <div class="nav-logo">
           <img
@@ -29,33 +29,174 @@
           />
         </div>
         <div class="nav-links">
-          <a href="#section-1">process</a><a href="#section-2">breeds</a
-          ><a href="#section-3">availability</a>
+          <a class="nav-link" href="#process">process</a
+          ><a class="nav-link" href="#breeds">breeds</a
+          ><a class="nav-link" href="#availability">availability</a>
           <button class="contact">contact</button>
         </div>
       </nav>
       <div class="content-section content-section-hero">
-        <img class="image-hero" src="" alt="" />
-        <div class="hero-content content"><h2>hero</h2></div>
+        <div class="image-hero">
+          <img
+            class="image-hero"
+            src="./resources/images/hero-full.png"
+            alt="a healthy and alert brown rooster on shown in a sunny patch of leafy green grass"
+          />
+        </div>
+        <div class="hero-content content">
+          <h1 class="content-section-heading">Chickens by Liz</h1>
+          <h2>
+            The happiest chickens in the eastern suburbs! hand raised, free
+            ranging, content chickens raised with love, direct to you. Contact
+            us now to get started!
+          </h2>
+          <button class="contact hero-contact">contact</button>
+        </div>
       </div>
     </header>
-    <div class="content-section section-1">
-      <h2>How It Works</h2>
-      <div class="content"></div>
-      <img src="" alt="" />
-    </div>
-    <div class="content-section section-2">
-      <h2>breeds</h2>
-      <div class="content"></div>
-      <img src="" alt="" />
-    </div>
-    <div class="content-section section-3">
-      <h2>currently available</h2>
-      <div class="content"></div>
-      <img src="" alt="" />
+    <div class="main-container">
+      <div id="process" class="content-section">
+        <h2 class="content-section-heading">How It Works</h2>
+        <div class="process">
+          <div class="content process-tab-container">
+            <button
+              class="btn process-tab process-tab-1 process-tab-active"
+              data-tab="1"
+            >
+              <span>1.</span>Get In Touch!
+            </button>
+            <button class="btn process-tab process-tab-2" data-tab="2">
+              <span>2.</span>Choose your Chickens!
+            </button>
+            <button class="btn process-tab process-tab-3" data-tab="3">
+              <span>3.</span>Receive Your Chickens!
+            </button>
+          </div>
+          <div class="process-content process-content-1 process-content-active">
+            <div class="process-img process-img-1">
+              <img
+                src="./resources/images/chicken-head.jpg"
+                alt="a curious brown chicken looks directly at the camera"
+              />
+            </div>
+            <div class="process-text">
+              <h5 class="process-header">
+                Check availability below or contact me to ask questions.
+              </h5>
+              <p>
+                We periodically update the site with the chickens that are
+                currently available, but you can always use the contact form
+                above to ask us questions, see if we have what you are looking
+                for or for any other general enquiry.
+              </p>
+            </div>
+          </div>
+
+          <div class="process-content process-content-2">
+            <div class="process-img process-img-2">
+              <img
+                src="./resources/images/chicken-field.jpg"
+                alt="a large brown chicken struts across a sunny meadow"
+              />
+            </div>
+            <div class="process-text">
+              <h5 class="process-header">
+                Choose the type and quantity of chickens.
+              </h5>
+              <p>
+                We can work through your selection to ensure you have adequate
+                space and resources, that you are choosing the right chickens
+                for your area and needs, and that you understand what will be
+                required.
+              </p>
+            </div>
+          </div>
+          <div class="process-content process-content-3">
+            <div class="process-img process-img-3">
+              <img
+                src="./resources/images/chicken-eat.jpg"
+                alt="a white chicken pecking at a piece of grain in the sun"
+              />
+            </div>
+            <div class="process-text">
+              <h5 class="process-header">
+                Stand by to receive your feathery guests!
+              </h5>
+              <p>
+                Once the chickens are ready and your space is prepared, we'll
+                get your new feathered friends settled in and accustomed to
+                their new home. We will do our best to help you make this
+                transition as smooth as possible.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="breeds" class="content-section">
+        <h2 class="content-section-heading">breeds</h2>
+        <div class="slider">
+          <div class="slide">
+            <div class="breed">
+              <h5 class="breed-header">Best financial decision ever!</h5>
+              <blockquote class="breed-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Accusantium quas quisquam non? Quas voluptate nulla minima
+                deleniti optio ullam nesciunt, numquam corporis et asperiores
+                laboriosam sunt, praesentium suscipit blanditiis. Necessitatibus
+                id alias reiciendis, perferendis facere pariatur dolore veniam
+                autem esse non voluptatem saepe provident nihil molestiae.
+              </blockquote>
+              <img src="" alt="" class="breed-photo" />
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="breed">
+              <h5 class="breed-header">
+                The last step to becoming a complete minimalist
+              </h5>
+              <blockquote class="breed-text">
+                Quisquam itaque deserunt ullam, quia ea repellendus provident,
+                ducimus neque ipsam modi voluptatibus doloremque, corrupti
+                laborum. Incidunt numquam perferendis veritatis neque
+                repellendus. Lorem, ipsum dolor sit amet consectetur adipisicing
+                elit. Illo deserunt exercitationem deleniti.
+              </blockquote>
+              <img src="" alt="" class="breed-photo" />
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="breed">
+              <h5 class="breed-header">Finally free from old-school banks</h5>
+              <blockquote class="breed-text">
+                Debitis, nihil sit minus suscipit magni aperiam vel tenetur
+                incidunt commodi architecto numquam omnis nulla autem,
+                necessitatibus blanditiis modi similique quidem. Odio aliquam
+                culpa dicta beatae quod maiores ipsa minus consequatur error
+                sunt, deleniti saepe aliquid quos inventore sequi.
+                Necessitatibus id alias reiciendis, perferendis facere.
+              </blockquote>
+              <img src="" alt="" class="breed-photo" />
+            </div>
+          </div>
+
+          <button class="slider-btn slider-btn-left">&larr;</button>
+          <button class="slider-btn slider-btn-right">&rarr;</button>
+          <div class="dots"></div>
+        </div>
+      </div>
+      <div id="availability" class="content-section">
+        <h2 class="content-section-heading">currently available</h2>
+        <div class="content"></div>
+        <img src="" alt="" />
+      </div>
     </div>
     <footer>
-      <fine><i>created by</i> @sMC-Lean.github</fine>
+      <fine
+        ><i>created by and copywright</i> @sMC-Lean.github
+        <i>, images courtesy of pixabay</i></fine
+      >
     </footer>
   </body>
 </html>
