@@ -1,5 +1,12 @@
 "use strict";
 
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+const supabaseUrl = "https://apiuivomhparrdogvxvj.supabase.co";
+// const supabaseKey = process.env.SUPABASE_KEY;
+const supabaseKey =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFwaXVpdm9taHBhcnJkb2d2eHZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY0NzM0OTksImV4cCI6MjAzMjA0OTQ5OX0.B41W9nVTBoYIl8L48Ryej8JaBFBMHP1OZ_dg3YZsI8o";
+const supabase = createClient(supabaseUrl, supabaseKey);
+
 // sticky nav bar;
 const nav = document.querySelector(".nav-bar");
 const header = document.querySelector(".header");
@@ -154,3 +161,6 @@ const slider = function () {
   });
 };
 slider();
+
+const { data, error } = await supabase.from("lizs-chicken-stock").select("*");
+console.log(data, error);
