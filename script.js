@@ -2,7 +2,6 @@
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 const supabaseUrl = "https://apiuivomhparrdogvxvj.supabase.co";
-// const supabaseKey = process.env.SUPABASE_KEY;
 const supabaseKey =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFwaXVpdm9taHBhcnJkb2d2eHZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY0NzM0OTksImV4cCI6MjAzMjA0OTQ5OX0.B41W9nVTBoYIl8L48Ryej8JaBFBMHP1OZ_dg3YZsI8o";
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -37,7 +36,6 @@ const handleHover = function (e) {
     siblings.forEach((el) => {
       if (el !== link) el.style.opacity = this;
     });
-    // button.style.opacity = this;
   }
 };
 
@@ -162,5 +160,90 @@ const slider = function () {
 };
 slider();
 
-const { data, error } = await supabase.from("lizs-chicken-stock").select("*");
-console.log(data, error);
+async function showStockOne() {
+  try {
+    const breedsTextField = document.querySelector(".avail-data-one");
+    const { data, error } = await supabase
+      .from("lizs-chicken-stock")
+      .select("*");
+    const filteredData = data.filter((entry) => entry.breed?.length);
+    const availBreeds = filteredData.reduce(
+      (html, entry, currIndex, dataArray) => {
+        if (!entry.breed) return html;
+        if (currIndex === dataArray.length - 1) {
+          return (html += ` and ${entry.breed} breeds available `);
+        }
+        return (html += `${entry.breed}, `);
+      },
+      "We currently have "
+    );
+    breedsTextField.innerHTML = availBreeds;
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+async function showStockTwo() {
+  try {
+    const breedsTableField = document.querySelector(".avail-data-two");
+    const { data, error } = await supabase
+      .from("lizs-chicken-stock")
+      .select("*");
+    const filteredData = data.filter((entry) => entry.breed?.length);
+    if (filteredData) {
+      let html = `<table class='breeds-table'>
+                        <caption>
+                        Currently Available
+                        </caption>
+                        <thead>
+                            <tr class='table-row'>
+                                <th scope="col">Breed</th>
+                                <th scope="col">Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody>`;
+      filteredData.forEach((entry) => {
+        html += `<tr class='table-row'>
+                    <th scope="row">${entry.breed}</th>
+                    <td>${entry.quantity}</td>
+                </tr>`;
+      });
+      html += "</table>";
+      breedsTableField.innerHTML = html;
+    }
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+showStockOne();
+showStockTwo();
+
+// modal and overlay behaviour for contact form;
+const contactButtons = document.querySelectorAll(".contact");
+const overlay = document.querySelector(".overlay");
+const modal = document.querySelector(".modal");
+const modalForm = document.querySelector(".modal-form");
+const buttonCloseModal = document.querySelector(".btn-close-modal");
+
+function changeModalState() {
+  overlay.classList.toggle("hidden");
+  modal.classList.toggle("hidden");
+}
+
+function openForm(event) {
+  event.preventDefault();
+  changeModalState();
+}
+
+buttonCloseModal.addEventListener("click", function () {
+  changeModalState();
+  modalForm.reset();
+});
+
+contactButtons.forEach((button) => button.addEventListener("click", openForm));
+modalForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  changeModalState();
+  modalForm.reset();
+});

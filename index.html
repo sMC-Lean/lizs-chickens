@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blossom Eggs</title>
+    <title>NAMENAME</title>
     <link
       rel="icon"
       type="image/x-icon"
@@ -63,13 +63,13 @@
               class="btn process-tab process-tab-1 process-tab-active"
               data-tab="1"
             >
-              <span>1.</span>Get In Touch!
+              <span>1.</span>Get In Touch
             </button>
             <button class="btn process-tab process-tab-2" data-tab="2">
-              <span>2.</span>Choose your Chickens!
+              <span>2.</span>Choose your Chickens
             </button>
             <button class="btn process-tab process-tab-3" data-tab="3">
-              <span>3.</span>Receive Your Chickens!
+              <span>3.</span>Receive Your Chickens
             </button>
           </div>
           <div class="process-content process-content-1 process-content-active">
@@ -146,7 +146,7 @@
               <img
                 src="./resources/images/silkie.jpg"
                 alt=""
-                class="breed-photo"
+                class="breed-img"
               />
             </div>
           </div>
@@ -162,7 +162,7 @@
               <img
                 src="./resources/images/brahma.jpg"
                 alt=""
-                class="breed-photo"
+                class="breed-img"
               />
             </div>
           </div>
@@ -178,7 +178,7 @@
               <img
                 src="./resources/images/sussex.jpg"
                 alt=""
-                class="breed-photo"
+                class="breed-img"
               />
             </div>
           </div>
@@ -190,8 +190,43 @@
       </div>
       <div id="availability" class="content-section">
         <h2 class="content-section-heading">currently available</h2>
-        <div class="content"></div>
-        <img src="" alt="" />
+        <div class="avail-content">
+          <div class="avail-text">
+            <h4 class="avail-text-heading">We are always changing our stock</h4>
+            <p class="avail-text-body avail-data-one"></p>
+            .
+            <p class="avail-text-body">
+              although we do our best to keep this site up to date, we are often
+              out with our chickens.
+            </p>
+            <strong class="avail-text-body"
+              >please contact us to confirm that we have what you are looking
+              for</strong
+            >
+            <button class="contact avail-contact">contact</button>
+          </div>
+          <div class="avail-img-div">
+            <img class="avail-img" src="./resources/images/flock.jpg" alt="" />
+          </div>
+        </div>
+        <div class="avail-content">
+          <div class="avail-img-div">
+            <img class="avail-img" src="./resources/images/flock.jpg" alt="" />
+          </div>
+          <div class="avail-text">
+            <h4 class="avail-text-heading">We are always changing our stock</h4>
+            <div class="avail-text-body avail-data-two"></div>
+            <p class="avail-text-body">
+              although we do our best to keep this site up to date, we are often
+              out with our chickens.
+            </p>
+            <strong class="avail-text-body"
+              >please contact us to confirm that we have what you are looking
+              for</strong
+            >
+            <button class="contact avail-contact">contact</button>
+          </div>
+        </div>
       </div>
     </div>
     <footer>
@@ -200,5 +235,22 @@
         <i>, images courtesy of pixabay</i></fine
       >
     </footer>
+    <div class="modal hidden">
+      <button class="btn-close-modal">&times;</button>
+      <h2 class="modal-header">Ask me a question!</h2>
+      <form class="modal-form">
+        <label for="firstName">First Name</label>
+        <input id="firstName" type="text" />
+        <label for="lastName">Last Name</label>
+        <input id="lastName" type="text" />
+        <label for="email">Email Address</label>
+        <input id="email" type="email" />
+        <label for="query">Your Question</label>
+        <textarea id="query"></textarea>
+        <button class="btn">Submit &rarr;</button>
+      </form>
+    </div>
+
+    <div class="overlay hidden"></div>
   </body>
 </html>
